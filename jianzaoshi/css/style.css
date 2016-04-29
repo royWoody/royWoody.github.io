@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+body {margin:0; padding:0; font-size:13px; font-family:"Microsoft YaHei",\5fae\8f6f\96c5\9ed1; color:#666666;}
+a {text-decoration:none; color:#666666;}
+a:hover {text-decoration:underline;}
+
+.header,.ma {width:980px; margin:0 auto;}
+.head {height:424px; background: url(../images/construction_head.jpg) no-repeat center top #2c5e89;}
+.header {height:424px; background: url(../images/construction_head_inner.png) no-repeat center top;}
+.logo {float:left; display:inline; margin:15px 0 0 15px;}
+.through,.through .ma {background:#fff7eb;}
+.title {font-size:45px; font-weight:bold; text-align:center; color:#333333; padding-top:50px;} 
+.btn {width:204px; height:45px; background:url(../images/construction_redbtn.png) no-repeat; text-align:center; font-size:21px; color:#FFF; border:0; cursor:pointer;}
+.intensiveTrain,.intensiveTrain .ma {background:#d5fcea;}
+.textbox {position:absolute;}
+.textbox span {font-size:19px; color:#333333; font-weight:bold; padding-bottom:10px; display:block;}
+.textbox p {font-size:15px;}
+.tb01 {left:107px; top:63px; width:340px;}
+.tb02 {left:585px; top:110px; width:220px;}
+.tb03 {left:85px; top:253px; width:240px;}
+.tb04 {left:548px; top:357px; width:350px;}
+.denseVolume,.denseVolume .ma {background:#dbe2f5 url(../images/triangle11_line.jpg) repeat-x;}
+.denseVolume p {font-size:19px; position:absolute; left:450px; top:110px; line-height:35px; color:#323232;}
+.denseVolume p span { font-size:21px; font-weight:bold;}
+.live,.live .ma {background:#d5fdda;}
+.liveinfo {position:absolute; width:445px; left:500px; top:100px;}
+.liveinfo li {font-size:19px; color:#323232; background:url(../images/construction_point.jpg) no-repeat left 15px; padding-left:20px; line-height:36px;}
+.msbox {width:422px; padding:15px; background:#4a5c4c;}
+.msleft {width:120px; text-align:center;}
+.msleft span {font-size:21px; color:#FFF; display:block; padding:5px 0;}
+.msleft p {font-size:15px; color:#FFF;}
+.msright {width:260px; background:#617063; padding:15px; height:125px; }
+.msright p {font-size:15px; color:#FFF; line-height:26px;}
+.mslist {float:left; display:inline; margin-left:30px;}
+.mslist li {float:left; display:inline; width:142px; padding:15px; background:#4a5c4c; margin-right:15px; text-align:center;}
+.mslist span {font-size:21px; color:#FFF; display:block; padding:5px 0;}
+.mslist p {font-size:15px; color:#FFF;}
+.online,.online .ma {background:#ffe0c1;}
+.onlinelist li {float:left; display:inline; width:280px; height:380px; margin:0 10px 0 30px; background:#1d45ce; border-radius:5px;}
+.onlinelist .pic {margin-top:30px; text-align:center;}
+.onlinelist strong {font-size:27px; color:#FFF; text-align:center; display:block; height:70px; line-height:70px;}
+.onlinelist p {font-size:15px; color:#FFF; width:210px; margin:0 0 0 35px; line-height:26px;}
+.onlinelist .zy {background:#ffb733;}
+.onlinelist .nx {background:#f15424;}
+.apply,.apply .ma {background:#fff7eb;}
+.applybox {width:918px; border:1px #e1e8f1 solid; margin:50px auto 0 auto; background:#f4f9ff; padding-bottom:35px;}
+.applybox .tit {color:#323232; font-size:18px; text-align:center; display:block; padding-top:30px;}
+.applybox ul {float:left; display:inline; margin:20px 0 0 58px; width:620px;}
+.applybox ul li {margin:20px 0 0 0; float:left; display:inline; width:100%;}
+.inp {border:1px #e0eaf6 solid; height:18px; /* line-height:30px; */ width:150px; padding:6px 3px; margin-right:20px; float:left; display:inline;font-size: 14px; font-family: 'Microsoft YaHei';}
+.applybox ul label {float:left; display:inline; font-size:15px; color:#323232; line-height:32px;}
+.applybox .tel {width:245px;}
+.applybox .zy {width:275px;}
+.sub { width:125px; height:60px; border:0; background:#ef6a12; color:#FFF; font-size:21px; border-radius:5px; cursor:pointer; float:left; display:inline; margin:46px 0 0 0;}
+.map,.map .ma {background:#e5ebfa;}
+.tip { float:left; display:inline; background:url(../images/construction_gth.jpg) no-repeat left top; padding-left:50px; height:35px; line-height:35px; font-size:19px; color:#323232; margin:45px 0 0 110px;}
+.practice,.practice .ma {background:#f3f3f3;}
+.practicelist {width:980px; overflow:hidden; margin-top:40px;}
+.practicelist ul {float:left; display:inline; margin-left:30px; width:980px;}
+.practicelist li {float:left; display:inline; width:132px; text-align:center; margin-right:60px;}
+.practicelist li span {display:block; color:#333333; font-size:17px; margin-top:25px;}
+.footer,.footer .ma {background:#545454; height:65px;}
+.footer p {line-height:65px; color:#FFF; text-align:center; font-family:Arial;}
+.plan,.plan .ma {background:#6172a0;}
+.wt {color:#FFF;}
+.plantable {width:920px; margin:0 auto; margin-top:50px; background:#FFF;}
+.plantable table {width:919px; border:1px #bfbfbf solid; border-bottom:0; border-right:0;}
+.plantable td { border:1px #bfbfbf solid; border-top:0; border-left:0; text-align:center; padding:13px 0; font-size:14px; color:#000000;}
+.plantable td p {color:#000000; line-height:28px; font-size:14px; padding:0 20px; text-align:left;}
+.plantable .tdfirst { padding-right: 30px; padding-left: 30px; background:#fff0e1; white-space: nowrap; }
+.plantable .tdtit {background:#ababab; color:#FFF; font-size:18px;cursor: pointer;}
+.plantable .tdtit.cur {
+	background:#ed8620;
+}
+.table-p { display: none; }
+.table-p.active { display: block; }
+.talbe-dl { *padding-bottom: 26px; }
+.talbe-dl dt {
+	width: 44px;
+	height: 20px;
+	margin-left: 8px;
+	margin-top: 4px;
+
+	background-color: #ed8620;
+	font: normal 14px 'Microsoft YaHei';
+	color: #fff;
+	line-height: 18px \9;
+}
+.talbe-dl dd {
+	/* width: 192px; */
+	height: 45px;
+	margin-right: 40px;
+	margin-bottom: 26px;
+}
+.talbe-dl dd p {
+	width: 118px;
+	padding-right: 10px;
+	line-height: inherit;
+}
+.talbe-dl dd strong {
+	display: block;
+	margin-bottom: 2px;
+
+	font: normal 18px 'Microsoft YaHei';
+}
+.talbe-dl dd span {
+	font: normal 14px 'Microsoft YaHei';
+	color: #ed8620;
+}
+.talbe-dl dd a {
+	width: 56px;
+	height: 25px;
+	margin-top: 10px;
+
+	background: url(../images/buy-btn.png) no-repeat;
+
+	font: normal 16px 'Microsoft YaHei';
+	color: #fff;
+	text-align: center;
+}
+.margin-l { margin-left: 51px; }
+.dl-all dt { background-color: #09a7c9; }
+.bmbtn {width:136px; height:43px; line-height:43px; background:url(../images/bmbtn.jpg) no-repeat; border:0; cursor:pointer; font-size:16px; color:#FFF;}
+.planlist {padding:0 30px;}
+.planlist ul {float:left; display:inline; margin-top:20px; width:905px;}
+.planlist ul li {float:left; display:inline; margin-top:20px; width:100%;}
+.planlist ul li .pic {padding-top:10px;}
+.plleft {float:left; width:70px; text-align:center;}
+.plleft span {color:#FFF; font-size:21px;}
+.plright {float:right; background:#FFF; width:795px; padding:15px; border-radius:5px;}
+.plright p { line-height:24px; font-size:14px;}
+.point {position:absolute; left:-10px; top:25px; width:10px; height:24px; background:url(../images/zx_triangle.jpg) no-repeat;}
+.tv {width:391px; height:317px; background:url(../images/construction_tv.jpg) no-repeat;}
+.flv {width:360px; height:205px; margin:15px 0 0 16px;}
