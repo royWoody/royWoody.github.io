@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js单线程</title>
+	<style>
+		#test {
+			width: 100px;
+			height: 50px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<button id="test"></button>
+	<script>
+		document.getElementById('test').onclick = function(){
+			console.log(1);
+		};
+		document.getElementById('test').onmouseenter = function(event){
+			console.log(event);
+		};
+		setTimeout(function(){
+			console.log(2);
+		}, 0);
+		while(true){
+			console.log(3);
+		}
+	</script>
+</body>
+</html>

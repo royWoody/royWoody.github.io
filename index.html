@@ -12,11 +12,14 @@
 	  <h1><a href="#">roywoody</a></h1>
 	</div>
 	<div class="nav">
-	  <ul class="ma">
-		  <li><a href="#">首页</a></li>
-		  <li><a href="#">随笔</a></li>
-		  <li><a href="#">书籍</a></li>
-		</ul>
+		<div class="ma clearfix">
+		    <ul class="fl">
+			  <li><a href="#">首页</a></li>
+			  <li><a href="#">随笔</a></li>
+			  <li><a href="#">书籍</a></li>
+			</ul>
+			<div class="net-speed-con fr">您当前的网速是：<span id="net-speed"></span>KB/s</div>
+		</div>
 	</div>
   </div>
   <div class="content ma">
@@ -27,5 +30,27 @@
       <li><a href="jianzaoshi/index.html" target="_blank">jianzaoshi</a></li>
     </ul>
   </div>
+  <script src="js/jquery.js"></script>
+  <script>
+  	(function(window, jQuery){
+
+  		$(document).ready(function(){
+
+		  	var img = document.createElement('img'),
+		  		stop = 0,
+		  		netSpeed = 0;
+		  	img.src = 'images/gdw-m.jpg';
+		  	var start = Date.now();
+
+		  	img.onload = function(){
+		  		stop = Date.now();
+		  		netSpeed = parseInt((371 / (stop - start) * 1000) * 100) / 100;
+  				$('#net-speed').text( netSpeed );
+		  	};
+
+  		});
+
+  	})(window, jQuery);
+  </script>
 </body>
 </html>

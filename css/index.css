@@ -38,6 +38,20 @@ h1 a {
 	color: #fff;
 }
 h1 a:hover { text-decoration: underline; }
+.fl {
+	float: left;
+	display: inline;
+}
+.fr {
+	float: right;
+	display: inline;
+}
+.clearfix { zoom: 1; }
+.clearfix:after {
+	content: '';
+	display: block;
+	clear: both;
+}
 
 .nav {
 	background-color: #169fe6;
@@ -64,4 +78,17 @@ h1 a:hover { text-decoration: underline; }
 .nav a:hover {
 	background-color: #fff;
 	color: #169fe6;
+}
+
+.net-speed-con {
+	height: 60px;
+	
+	font-family: 'Microsoft YaHei';
+	line-height: 60px;
+	color: #e8e8e8;
+	text-shadow: 3px 3px 3px #000;
+}
+#net-speed {
+	margin-left: 5px;
+	margin-right: 5px;
 }

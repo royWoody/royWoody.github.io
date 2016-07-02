@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>index</title>
+</head>
+<body>
+	<script>
+		// 1.请写出弹出值，并解释为什么
+		var a = 25;
+		var b = 15;
+		(function(){
+			alert(a);	// 与alert(window.a);有什么不同？
+			var a = 30;
+		})();
+		// undefined 局部作用域内的变量声明提升
+		// 相当于 var a; alert(a); a = 30;
+		// 立即执行匿名函数局部作用域里重新声明的变量，不会影响到
+		// 作用域外的同名变量，如果局部作用域内有同名变量，会优先
+		// 访问作用域内的变量
+	</script>
+</body>
+</html>

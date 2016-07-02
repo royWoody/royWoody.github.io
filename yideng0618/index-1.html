@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>index</title>
+</head>
+<body>
+	<script>
+		// 2.请写出如下代码的输出值，取消其中注释掉的代码后的输出值
+		this.a = 20;
+		var test = {
+			a: 40,
+			init: function(){
+				function go(){
+					this.a = 60;
+					alert(this.a);
+				}
+				go.prototype.a = 50;
+				return go;
+			}
+		};
+
+		var p = test.init();
+		p();
+		new(test.init())();
+		// 注释时：输出20 50 因为
+		// 取消注释时：输出60 60 因为构造函数里的this比prototype
+		// 的优先级高
+	</script>
+</body>
+</html>
