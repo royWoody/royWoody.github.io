@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>show-img</title>
+    <link rel="stylesheet" href="css/reset-base-m.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="xuecheng.ico" type="image/x-icon">
+    <style>
+        .wrap {
+            width: 450px;
+            margin-top: 50px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 表情功能 BEGIN -->
+    <div class="wrap smile-list-con ma">
+        <h2>表情功能</h2>
+        <div class="container-main ta-newsay">
+            <h3><img src="images/ta-newthings-tit.png" alt="说说你的新鲜事儿" /></h3>
+            <div class="comment-area mt15">
+                <div class="clearfix pr">
+                    <textarea name="comment-con" id="comment-con" class="send-text-div" placeholder="随便说两句吧~" contenteditable="true"></textarea>
+                    <!-- <div id="comment-con" class="send-text-div" contenteditable="true"></div> -->
+                    <p class="introduce-num">您还可以输入 <strong>200</strong> 个字</p>
+                </div>
+                <div class="comment-tools clearfix">
+                    <div class="fl l-faces pr">
+                        <a href="javascript:;" class="fl mr20 smile"><i class="fa fa-smile-o"></i>表情</a>
+                        <ul class="phiz-list"></ul>
+                    </div>
+                    <a href="javascript:;" class="fr sign-btn pub-btn">发布</a>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <!-- 表情功能 END -->
+    <!-- 图片预览功能 BEGIN -->
+    <div class="wrap show-img-content ma">
+        <h2>图片预览功能</h2>
+        <div class="user-upload-img clearfix">
+            <a href="javascript: void(0);"><img src="images/content/circle-img_140x140.jpg" alt="圈子图片"></a>
+            <a href="javascript: void(0);"><img src="images/content/circle-img_140x140.jpg" alt="圈子图片"></a>
+            <a href="javascript: void(0);"><img src="images/content/circle-img_140x140.jpg" alt="圈子图片"></a>
+            <a href="javascript: void(0);"><img src="images/content/circle-img_140x140.jpg" alt="圈子图片"></a>
+            <a href="javascript: void(0);"><img src="images/content/circle-img_140x140.jpg" alt="圈子图片"></a>
+            <a href="javascript: void(0);"><img src="images/content/circle-img_140x140.jpg" alt="圈子图片"></a>
+            <a href="javascript: void(0);"><img src="images/content/circle-img_140x140.jpg" alt="圈子图片"></a>
+            <a href="javascript: void(0);"><img src="images/content/circle-img_140x140.jpg" alt="圈子图片"></a>
+            <a href="javascript: void(0);"><img src="images/content/circle-img_140x140.jpg" alt="圈子图片"></a>
+        </div>
+        <div class="upload-img-slide none">
+            <div class="img-slide-inner">
+                <div class="img-con-top pr">
+                    <div class="img-con-top-inner pr">
+                        <img src="images/content/demo-1.jpg" height="400" width="400" alt="上传图片">
+                    </div>
+                    <a href="javasctip: void(0);" class="prev-btn-big"></a>
+                    <a href="javascript: void(0);" class="next-btn-big"></a>
+                    <!-- <span class="pointer-reduce" style="display: none;"></span> -->
+                </div>
+                <div class="img-con-bottom pr">
+                    <div class="img-con-bottom-inner pr">
+                        <div class="img-con-bottom-list clearfix">
+                            <a href="javascript: void(0);" class="img-s-item active" data-url="images/content/demo-1.jpg"><img src="images/content/demo-s-1.jpg" height="50" width="50" alt="上传图片"></a>
+                            <a href="javascript: void(0);" class="img-s-item" data-url="images/content/demo-2.jpg"><img src="images/content/demo-s-2.jpg" height="50" width="50" alt="上传图片"></a>
+                            <a href="javascript: void(0);" class="img-s-item" data-url="images/content/demo-3.jpg"><img src="images/content/demo-s-1.jpg" height="50" width="50" alt="上传图片"></a>
+                            <a href="javascript: void(0);" class="img-s-item" data-url="images/content/demo-4.jpg"><img src="images/content/demo-s-1.jpg" height="50" width="50" alt="上传图片"></a>
+                            <a href="javascript: void(0);" class="img-s-item" data-url="images/content/demo-5.jpg"><img src="images/content/demo-s-1.jpg" height="50" width="50" alt="上传图片"></a>
+                            <a href="javascript: void(0);" class="img-s-item" data-url="images/content/demo-1.jpg"><img src="images/content/demo-s-1.jpg" height="50" width="50" alt="上传图片"></a>
+                            <a href="javascript: void(0);" class="img-s-item" data-url="images/content/demo-2.jpg"><img src="images/content/demo-s-1.jpg" height="50" width="50" alt="上传图片"></a>
+                            <a href="javascript: void(0);" class="img-s-item" data-url="images/content/demo-3.jpg"><img src="images/content/demo-s-1.jpg" height="50" width="50" alt="上传图片"></a>
+                            <a href="javascript: void(0);" class="img-s-item" data-url="images/content/demo-4.jpg"><img src="images/content/demo-s-1.jpg" height="50" width="50" alt="上传图片"></a>
+                        </div>
+                    </div>
+                    <a href="javascript: void(0);" class="prev-btn disable"><i class="fa fa-angle-left"></i></a>
+                    <a href="javascript: void(0);" class="next-btn"><i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 图片预览功能 END -->
+    <script src="js/vendor/jquery/1.11.1/jquery.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
