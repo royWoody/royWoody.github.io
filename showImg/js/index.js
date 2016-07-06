@@ -1,5 +1,26 @@
 (function(window, $){
     $(document).ready(function(){
+        // 鼠标事件效果
+        $('.item-a').on('mouseenter mouseleave', function(event){
+            var $this = $(this),
+                $detail = $this.find('.item-detail'),
+                mousePos = getPos( getDir(event, $this) ),
+                top = mousePos.top,
+                left = mousePos.left,
+                timer = null;
+
+            if ( event.type == 'mouseenter' ) {
+                clearTimeout(timer);
+                $detail.css({'top': top, 'left': left});
+                timer = setTimeout(function(){
+                    $detail.css({'top': 0, 'left': 0, 'transition': 'all 300ms ease'});
+                }, 30);
+            } else if ( event.type == 'mouseleave' ) {
+                
+                $detail.css({'top': top, 'left': left, 'transition': 'all 300ms ease'});
+            }
+        });
+
         /* 右侧漂浮-返回顶部 */
         $(window).scroll(function(){
             var wh = $(window).height();
@@ -355,4 +376,45 @@
             height: pageHeight
         };
     }
+
+    // 判断鼠标滑入元素的放向功能
+    function getDir(event, $obj) {
+        var w = $obj.width();
+        var h = $obj.height();
+        /*计算x和y得到一个角到elem的中心，得到相对于x和y值到div的中心*/
+        var x = (event.pageX - $obj.offset().left - (w / 2)) * (w > h ? (h / w) : 1);
+        var y = (event.pageY - $obj.offset().top - (h / 2)) * (h > w ? (w / h) : 1);
+        /** 鼠标从哪里来 / 角度 和 方向出去顺时针（得出的结果是TRBL 0 1 2 3
+         * 首先计算点的角度，
+         * 再加上180度摆脱负值
+         * 除于90得到的象限（象限，又称象限角，意思就是一个圆之四分之一等份）
+         * 加上3，做一个模（求模 求余数）4的象限转移到一个适当的顺时针 得出 TRBL 0 1 2 3（上/右/下/左）
+         **/
+        var number = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180) / 90) + 3) % 4;
+        return number;
+    }
+    function getPos(dirNumber) {
+        var obj = {};
+        switch(dirNumber) {
+
+            case 0://from top
+                obj.left = 0;
+                obj.top = "-100%";
+                break;
+            case 1://from right
+                obj.left = "100%";
+                obj.top = 0;
+                break;
+            case 2://from bottom
+                obj.left = 0;
+                obj.top = "100%";
+                break;
+            case 3://from left
+                obj.left = "-100%";
+                obj.top = 0;
+                break;
+        }
+        return obj;
+    }
+
 })(window, jQuery);
