@@ -14,30 +14,49 @@
 	</div>
 	<div class="nav">
 		<div class="ma clearfix">
-		    <ul class="fl">
-			  <li><a href="#">首页</a></li>
-			  <li><a href="#">随笔</a></li>
-			  <li><a href="#">书籍</a></li>
+		    <ul class="tab-nav fl">
+			  <li class="active"><a href="javascript: void(0);">首页</a></li>
+			  <li><a href="javascript: void(0);">随笔</a></li>
+			  <li><a href="javascript: void(0);">书籍</a></li>
 			</ul>
 			<div class="net-speed-con fr">您当前的网速是：<span id="net-speed"></span>KB/s</div>
 		</div>
 	</div>
   </div>
   <div class="content ma">
-    <ul>
-      <li><a href="xmo/index.html" target="_blank">mo</a></li>
-      <li><a href="fullpage/index.html" target="_blank">fullpage</a></li>
-      <li><a href="zigezheng/index.html" target="_blank">zigezheng</a></li>
-      <li><a href="jianzaoshi/index.html" target="_blank">jianzaoshi</a></li>
-      <li><a href="showImg/show-img.html" target="_blank">showImg</a></li>
-    </ul>
+	  <div class="tab-item" style="display: block;">
+	  	<h2 style="margin-top: 0;">功能、效果</h2>
+	    <ul class="object-list clearfix">
+	      <li><a href="showImg/show-img.html" target="_blank">鼠标滑过、表情等</a></li>
+	      <li><a href="fullpage/index.html" target="_blank">整屏切换</a></li>
+	    </ul>
+	  	<h2>移动端</h2>
+	    <ul class="object-list clearfix">
+	      <li><a href="xmo/index.html" target="_blank">学历报考</a></li>
+	      <li><a href="tTao.html" target="_blank">淘宝</a></li>
+	    </ul>
+	  	<h2>活动页</h2>
+	    <ul class="object-list clearfix">
+	      <li><a href="zigezheng/index.html" target="_blank">资格证</a></li>
+	      <li><a href="jianzaoshi/index.html" target="_blank">建造师</a></li>
+	    </ul>
+	  	<!-- <h2>企业网页、电商首页</h2>
+	  		    <ul class="object-list clearfix">
+	  		      <li><a href="" target="_blank">企业网页1</a></li>
+	  		      <li><a href="" target="_blank">企业网页2</a></li>
+	  		      <li><a href="" target="_blank">电商首页1</a></li>
+	  		      <li><a href="" target="_blank">电商首页2</a></li>
+	  		    </ul> -->
+	  </div>
+	  <div class="tab-item">2</div>
+	  <div class="tab-item">3</div>
   </div>
   <script src="js/jquery.js"></script>
   <script>
   	(function(window, jQuery){
 
   		$(document).ready(function(){
-
+  			// 测网速
 		  	var img = document.createElement('img'),
 		  		stop = 0,
 		  		netSpeed = 0;
@@ -50,6 +69,21 @@
   				$('#net-speed').text( netSpeed );
 		  	};
 
+		  	// tab-nav
+		  	$('.tab-nav li').click(function(){
+		  		var $this = $(this),
+		  			index = $this.index(),
+		  			isActive = $this.is('.active');
+
+		  		if ( !isActive ) {
+		  			$this.addClass('active')
+		  					.siblings()
+		  					.removeClass('active');
+		  			$('.tab-item').hide()
+		  							.eq(index)
+		  							.show();
+		  		}
+		  	});
   		});
 
   	})(window, jQuery);
