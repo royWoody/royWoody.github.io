@@ -118,6 +118,9 @@ h2 {
     font: normal 26px 'Microsoft YaHei';
 	color: #666;
 }
+h2.first {
+	margin-top: 0;
+}
 .object-list {
 	padding: 15px;
 
