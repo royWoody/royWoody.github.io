@@ -1,4 +1,5 @@
 #top {
+	min-width: 1266px;
 	background: url(../images/body_bg.png) repeat-x;
 }
 body {
