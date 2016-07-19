@@ -121,6 +121,13 @@ h2 {
 h2.first {
 	margin-top: 0;
 }
+h3 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	font-weight: normal;
+	font-size: 16px;
+}
 .object-list {
 	padding: 15px;
 
@@ -133,4 +140,38 @@ h2.first {
 .object-list a {
 	font-size: 18px;
 	text-decoration: underline;
+}
+
+.summry {
+	display: block;
+	height: 30px;
+
+	color: #105cb6;
+	line-height: 30px;
+}
+
+dl {
+	font-family: 'Microsoft YaHei';
+	color: #666;
+}
+dt {
+	font-size: 1.17em;
+}
+dl img {
+	width: 130px;
+	height: 130px;
+}
+.book-list li {
+	float: left;
+	width: 180px;
+	margin-left: 10px;
+
+	text-align: center;
+}
+.book-list p {
+	margin-top: 5px;
+	margin-bottom: 5px;
+
+	font-weight: normal;
+	font-size: 14px;
 }
