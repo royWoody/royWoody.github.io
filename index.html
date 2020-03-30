@@ -134,9 +134,9 @@
 	  			<ul class="book-list clearfix">
 	  				<li>
 			  			<img src="images/content/book/es6-2.jpg" alt="ES6标准入门（第2版）">
-			  			<p>ES6标准入门（第2版）</p>	  					
+			  			<p>ES6标准入门（第2版）</p>
 	  				</li>
-	  			</ul>		  			
+	  			</ul>
 	  		</dd>
 	  		<!-- <dt>中级</dt> -->
 	  		<dt>高级</dt>
@@ -219,40 +219,54 @@
   </div>
   <script src="js/jquery.js"></script>
   <script>
-  	(function(window, jQuery){
+  	// (function(window, jQuery){
 
-  		$(document).ready(function(){
-  			// 测网速
-		  	var img = document.createElement('img'),
-		  		stop = 0,
-		  		netSpeed = 0;
-		  	img.src = 'images/gdw-m.jpg';
-		  	var start = Date.now();
+  	// 	$(document).ready(function(){
+  	// 		// 测网速
+		 //  	var img = document.createElement('img'),
+		 //  		stop = 0,
+		 //  		netSpeed = 0;
+		 //  	img.src = 'images/gdw-m.jpg';
+		 //  	var start = Date.now();
 
-		  	img.onload = function(){
-		  		stop = Date.now();
-		  		netSpeed = parseInt((371 / (stop - start) * 1000) * 100) / 100;
-  				$('#net-speed').text( netSpeed );
-		  	};
+		 //  	img.onload = function(){
+		 //  		stop = Date.now();
+		 //  		netSpeed = parseInt((371 / (stop - start) * 1000) * 100) / 100;
+  	// 			$('#net-speed').text( netSpeed );
+		 //  	};
 
-		  	// tab-nav
-		  	$('.tab-nav li').click(function(){
-		  		var $this = $(this),
-		  			index = $this.index(),
-		  			isActive = $this.is('.active');
+		 //  	// tab-nav
+		 //  	$('.tab-nav li').click(function(){
+		 //  		var $this = $(this),
+		 //  			index = $this.index(),
+		 //  			isActive = $this.is('.active');
 
-		  		if ( !isActive ) {
-		  			$this.addClass('active')
-		  					.siblings()
-		  					.removeClass('active');
-		  			$('.tab-item').hide()
-		  							.eq(index)
-		  							.show();
-		  		}
-		  	});
-  		});
+		 //  		if ( !isActive ) {
+		 //  			$this.addClass('active')
+		 //  					.siblings()
+		 //  					.removeClass('active');
+		 //  			$('.tab-item').hide()
+		 //  							.eq(index)
+		 //  							.show();
+		 //  		}
+		 //  	});
+  	// 	});
 
-  	})(window, jQuery);
+  	// })(window, jQuery);
+
+  	setTimeout(() => {
+	  console.log(1);
+	  setTimeout(() => {
+	    console.log(2);
+	  }, 500);
+	}, 1000);
+
+	setTimeout(() => {
+	  console.log(3);
+	  setTimeout(() => {
+	    console.log(4);
+	  }, 1000);
+	}, 500);
   </script>
 </body>
 </html>
